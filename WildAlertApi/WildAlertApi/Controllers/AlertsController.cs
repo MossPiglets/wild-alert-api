@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WildAlertApi.Models.Alerts;
 
 namespace WildAlertApi.Controllers;
 
@@ -14,9 +15,13 @@ public class AlertsController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Post()
+    public IActionResult Post(CreateAlert createAlert)
     {
         // dodanie do bazy
+        // wstrzyknij applicationDBContext w konstruktorze tego kontrolera
+        // stwórz nową instancję klasy alert na podstawie createdAlert 
+        // dodaj nową instancję bazy używając dbcontextu
+        // zrób save changes i zwróc instancję alertu w ok
         return Ok();
     }
 }
