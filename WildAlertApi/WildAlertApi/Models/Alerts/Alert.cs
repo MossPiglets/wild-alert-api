@@ -1,5 +1,4 @@
-namespace WildAlertApi;
-
+namespace WildAlertApi.Models.Alerts;
 public class Alert
 {
     public DateTime CreatedAt { get; set; }
@@ -7,14 +6,4 @@ public class Alert
     public double Latitude { get; set; }
     public string? Comments { get; set; }
     public AnimalType Animal { get; set; }
-}
-
-public enum AnimalType
-{
-    Unknown,
-    Boar,
-    Fox,
-    Deer,
-    // add new entry here
-    Other = 666
 }
