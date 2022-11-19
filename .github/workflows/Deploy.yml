@@ -28,4 +28,4 @@ jobs:
           heroku_app_name: wild-alert-api #Must be unique in Heroku
           heroku_email: truemosspiglets@gmail.com
           usedocker: true
-          appdir: WildAlertApi/WildAlertApi
+          appdir: WildAlertApi
