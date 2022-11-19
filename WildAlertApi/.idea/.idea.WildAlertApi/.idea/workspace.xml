@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2022_16_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2022_16_35__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2022_17_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2022_17_19__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e79aa56d39ef442e881de175f93282e51a00/2a/cd7436c6/HerokuDbConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e79aa56d39ef442e881de175f93282e51a00/a1/44490af4/HerokuDbConnectionOption.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668865747764</updated>
       <workItem from="1668865754852" duration="3028000" />
+      <workItem from="1668876642715" duration="1758000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WildAlertApi.Extensions;
 using WildAlertApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(x =>
-    x.UseNpgsql(builder.Configuration.GetConnectionString("default")));
+{
+    string connectionString;
+    if (builder.Environment.IsProduction())
+    {
+        connectionString = new HerokuDbConnector.HerokuDbConnector().Build();
+    }
+    else
+    {
+        connectionString = builder.Configuration.GetConnectionString("default");
+    }
+    x.UseNpgsql(connectionString);
+});
+
 
 var app = builder.Build();
 
@@ -24,4 +37,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Migrate().Run();
