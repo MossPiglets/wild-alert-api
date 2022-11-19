@@ -26,6 +26,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(x =>
     x.UseNpgsql(connectionString);
 });
 
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -34,6 +35,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.UseCors(o => o.AllowAnyOrigin().AllowAnyMethod());
 
 app.UseAuthorization();
 
