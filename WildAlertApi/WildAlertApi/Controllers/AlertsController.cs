@@ -58,7 +58,8 @@ public class AlertsController : ControllerBase
             return BadRequest(this.ModelState);
         }
 
-        const double radius = 0.016;
+        double radius = query.Radius * 0.008;
+        
         IEnumerable<Alert> alerts = _context.Alerts
             .Where(x => (query.Latitude==null || query.Longitude==null) ||
                         ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
