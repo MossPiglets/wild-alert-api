@@ -1,7 +1,9 @@
 using System.Text.Json.Serialization;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using WildAlertApi.Extensions;
 using WildAlertApi.Models;
+using WildAlertApi.Models.Alerts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(x =>
 });
 
 builder.Services.AddCors();
+
+// Fluent validation
+builder.Services.AddValidatorsFromAssemblyContaining<CreateAlertValidator>();
 
 var app = builder.Build();
 
