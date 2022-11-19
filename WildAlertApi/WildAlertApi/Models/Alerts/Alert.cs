@@ -1,6 +1,7 @@
 namespace WildAlertApi.Models.Alerts;
 public class Alert
 {
+    public Guid Id { get; set; }
     public DateTime CreatedAt { get; set; }
     public double Longitude { get; set; }    
     public double Latitude { get; set; }

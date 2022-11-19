@@ -7,5 +7,6 @@ public class AlertConfiguration : IEntityTypeConfiguration<Alert>
 {
     public void Configure(EntityTypeBuilder<Alert> builder)
     {
+        builder.HasKey(x => x.Id);
     }
 }
