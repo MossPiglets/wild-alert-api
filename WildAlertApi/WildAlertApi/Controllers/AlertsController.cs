@@ -40,9 +40,7 @@ public class AlertsController : ControllerBase
     [ProducesResponseType(typeof(IEnumerable<Alert>), (int) HttpStatusCode.OK)]
     public IActionResult Get()
     {
-        //pobrac wszystkie aleryy za bazy
-        //zwrócic je w ok
-        
-        return Ok();
+        IEnumerable<Alert> alerts = _context.Alerts.ToList();        
+        return Ok(alerts);
     }
 }
