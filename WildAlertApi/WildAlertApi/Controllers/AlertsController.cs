@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using WildAlertApi.Models;
 using WildAlertApi.Models.Alerts;
@@ -32,5 +33,16 @@ public class AlertsController : ControllerBase
         _context.Alerts.Add(alert);
         _context.SaveChanges();
         return Ok(alert);
+    }
+    
+    
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<Alert>), (int) HttpStatusCode.OK)]
+    public IActionResult Get()
+    {
+        //pobrac wszystkie aleryy za bazy
+        //zwrócic je w ok
+        
+        return Ok();
     }
 }
