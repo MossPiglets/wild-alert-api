@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432d5388-af32-4c6d-b1ba-e2ce7130a6f3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Models/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" afterDir="false" />
+    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

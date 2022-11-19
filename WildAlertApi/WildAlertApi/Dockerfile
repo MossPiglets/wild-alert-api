@@ -5,8 +5,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["WildAlertApi/WildAlertApi.csproj", "WildAlertApi/"]
-RUN dotnet restore "WildAlertApi/WildAlertApi.csproj"
+COPY ["WildAlertApi.csproj", "./"]
+RUN dotnet restore "WildAlertApi.csproj"
 COPY . .
 WORKDIR "/src/WildAlertApi"
 RUN dotnet build "WildAlertApi.csproj" -c Release -o /app/build
