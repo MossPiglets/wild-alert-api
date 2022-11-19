@@ -24,7 +24,7 @@ public class AlertsController : ControllerBase
         {
             Animal = createAlert.Animal,
             Comments = createAlert.Comments,
-            CreatedAt = DateTime.Now,
+            CreatedAt = DateTime.UtcNow,
             Latitude = createAlert.Latitude,
             Longitude = createAlert.Longitude,
             Id = Guid.NewGuid()
