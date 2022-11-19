@@ -38,9 +38,14 @@ public class AlertsController : ControllerBase
     
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<Alert>), (int) HttpStatusCode.OK)]
-    public IActionResult Get()
+    public IActionResult Get([FromQuery] GetAlertsQuery query)
     {
-        IEnumerable<Alert> alerts = _context.Alerts.ToList();        
+        const double radius = 0.016;
+        IEnumerable<Alert> alerts = _context.Alerts
+            .Where(x => (query.Latitude==null || query.Longitude==null) ||
+                        ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
+                        (x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius)))
+            .ToList();       
         return Ok(alerts);
     }
 }
