@@ -17,6 +17,6 @@ public class AlertsController : ControllerBase
     public IActionResult Post()
     {
         // dodanie do bazy
-        
+        return Ok();
     }
 }
