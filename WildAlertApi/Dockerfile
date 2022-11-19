@@ -15,4 +15,7 @@ RUN dotnet publish "WildAlertApi.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WildAlertApi.dll"]
+#ENTRYPOINT ["dotnet", "WildAlertApi.dll"]
+
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet WildAlertApi.dll
+
