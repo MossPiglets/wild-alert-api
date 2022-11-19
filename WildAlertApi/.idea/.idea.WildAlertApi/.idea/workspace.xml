@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,6 @@
       <option name="presentableId" value="Default" />
       <updated>1668865747764</updated>
       <workItem from="1668865754852" duration="3028000" />
-      <workItem from="1668875597747" duration="519000" />
     </task>
     <servers />
   </component>
