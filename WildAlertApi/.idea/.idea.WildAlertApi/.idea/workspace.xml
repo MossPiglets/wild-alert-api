@@ -11,10 +11,9 @@
     <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="initial refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlertValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/IApplicationMarker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/IApplicationMarker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Application/WildAlert.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/WildAlert.Application.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +36,8 @@
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/Alert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -111,7 +110,7 @@
       <updated>1668865747764</updated>
       <workItem from="1668865754852" duration="3028000" />
       <workItem from="1668876642715" duration="1758000" />
-      <workItem from="1669651663579" duration="4795000" />
+      <workItem from="1669651663579" duration="6830000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>

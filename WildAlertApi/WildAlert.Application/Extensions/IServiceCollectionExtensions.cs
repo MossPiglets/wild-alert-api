@@ -1,4 +1,5 @@
 using System.Reflection;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,5 +11,8 @@ public static class IServiceCollectionExtensions
     public static void AddApplication(this IServiceCollection services)
     {
         services.AddMediatR(typeof(IApplicationMarker).Assembly);
+        
+        // Fluent validation
+        services.AddValidatorsFromAssemblyContaining<IApplicationMarker>();
     }
 }

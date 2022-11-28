@@ -20,7 +20,7 @@ public class AlertsController : ControllerBase
     private readonly ApplicationDbContext _context;
     private readonly IMediator _mediator;
 
-    public AlertsController(ILogger<AlertsController> logger, ApplicationDbContext context, IMediator mediator)
+    public AlertsController(ILogger<AlertsController> logger, ApplicationDbContext context, Mediator mediator)
     {
         _logger = logger;
         _context = context;
