@@ -8,19 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="initial refactoring">
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Extensions/WebApplicationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Extensions/WebApplicationExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/Alert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/Alert.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AlertConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AnimalType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="initial refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +23,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlertValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/GetAlertQueryValidator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/Alert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -116,7 +104,7 @@
       <updated>1668865747764</updated>
       <workItem from="1668865754852" duration="3028000" />
       <workItem from="1668876642715" duration="1758000" />
-      <workItem from="1669651663579" duration="2243000" />
+      <workItem from="1669651663579" duration="2560000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
