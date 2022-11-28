@@ -5,7 +5,7 @@ namespace WildAlert.Persistence;
 
 public class ApplicationDbContext : DbContext 
 {
-    public DbSet<Alert> Alerts { get; set; }
+    public DbSet<AlertEntity> Alerts { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 

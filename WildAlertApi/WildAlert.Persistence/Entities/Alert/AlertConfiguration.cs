@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace WildAlert.Persistence.Entities.Alert;
 
-public class AlertConfiguration : IEntityTypeConfiguration<Alert>
+public class AlertConfiguration : IEntityTypeConfiguration<AlertEntity>
 {
-    public void Configure(EntityTypeBuilder<Alert> builder)
+    public void Configure(EntityTypeBuilder<AlertEntity> builder)
     {
         builder.HasKey(x => x.Id);
     }

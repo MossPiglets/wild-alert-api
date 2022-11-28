@@ -1,5 +1,5 @@
 namespace WildAlert.Persistence.Entities.Alert;
-public class Alert
+public class AlertEntity
 {
     public Guid Id { get; set; }
     public DateTime CreatedAt { get; set; }
