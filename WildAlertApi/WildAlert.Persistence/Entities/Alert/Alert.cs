@@ -1,4 +1,4 @@
-namespace WildAlert.Api.Models.Alerts;
+namespace WildAlert.Persistence.Entities.Alert;
 public class Alert
 {
     public Guid Id { get; set; }

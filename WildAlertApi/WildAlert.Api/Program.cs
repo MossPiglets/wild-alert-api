@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WildAlert.Api.Extensions;
 using WildAlert.Api.Models;
 using WildAlert.Api.Models.Alerts;
+using WildAlert.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Models;
 using WildAlert.Api.Models.Alerts;
 using WildAlert.Api.Extensions;
+using WildAlert.Persistence;
+using WildAlert.Persistence.Entities.Alert;
 
 namespace WildAlert.Api.Controllers;
 

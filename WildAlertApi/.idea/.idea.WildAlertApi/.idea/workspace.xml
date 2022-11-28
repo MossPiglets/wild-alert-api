@@ -8,30 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="i don't know what happened here">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Extensions/ValidationResultExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Extensions/WebApplicationExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Migrations/20221119163527_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Migrations/20221119163527_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/Alert.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/AlertConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/AnimalType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/CreateAlert.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/CreateAlertValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/GetAlertQueryValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/GetAlertsQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/ApplicationDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/docker-compose.yaml" beforeDir="false" />
+    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="initial refactoring">
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Extensions/WebApplicationExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Extensions/WebApplicationExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/Alert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/Alert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AlertConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AnimalType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Models/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +36,16 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/Alert.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlertValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/GetAlertQueryValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/GetAlertsQuery.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/Alert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -128,7 +116,7 @@
       <updated>1668865747764</updated>
       <workItem from="1668865754852" duration="3028000" />
       <workItem from="1668876642715" duration="1758000" />
-      <workItem from="1669651663579" duration="1574000" />
+      <workItem from="1669651663579" duration="2243000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -165,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668887170662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="initial refactoring">
+      <created>1669653309990</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669653309990</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +187,7 @@
     <MESSAGE value="merge commit" />
     <MESSAGE value="Hubert said 'commit' I commited" />
     <MESSAGE value="i don't know what happened here" />
-    <option name="LAST_COMMIT_MESSAGE" value="i don't know what happened here" />
+    <MESSAGE value="initial refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial refactoring" />
   </component>
 </project>

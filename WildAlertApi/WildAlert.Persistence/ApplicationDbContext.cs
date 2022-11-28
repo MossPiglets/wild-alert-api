@@ -1,8 +1,7 @@
-﻿using System.Security.Cryptography.Xml;
-using Microsoft.EntityFrameworkCore;
-using WildAlert.Api.Models.Alerts;
+﻿using Microsoft.EntityFrameworkCore;
+using WildAlert.Persistence.Entities.Alert;
 
-namespace WildAlert.Api.Models;
+namespace WildAlert.Persistence;
 
 public class ApplicationDbContext : DbContext 
 {

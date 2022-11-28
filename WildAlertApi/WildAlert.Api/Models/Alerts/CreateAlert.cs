@@ -1,4 +1,6 @@
-﻿namespace WildAlert.Api.Models.Alerts;
+﻿using WildAlert.Persistence.Entities.Alert;
+
+namespace WildAlert.Api.Models.Alerts;
 
 public class CreateAlert
 {
