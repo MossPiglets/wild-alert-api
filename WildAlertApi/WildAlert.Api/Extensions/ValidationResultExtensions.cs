@@ -1,7 +1,7 @@
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace WildAlertApi.Extensions;
+namespace WildAlert.Api.Extensions;
 
 public static class ValidationResultExtensions
 {

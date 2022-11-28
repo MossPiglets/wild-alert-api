@@ -2,11 +2,11 @@ using System.Net;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using WildAlertApi.Extensions;
-using WildAlertApi.Models;
-using WildAlertApi.Models.Alerts;
+using WildAlert.Api.Models;
+using WildAlert.Api.Models.Alerts;
+using WildAlert.Api.Extensions;
 
-namespace WildAlertApi.Controllers;
+namespace WildAlert.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]

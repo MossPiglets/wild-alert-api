@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WildAlertApi.Models;
+using WildAlert.Api.Models;
 
-namespace WildAlertApi.Extensions;
+namespace WildAlert.Api.Extensions;
 
 public static class WebApplicationExtensions
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace WildAlertApi.Models.Alerts;
+namespace WildAlert.Api.Models.Alerts;
 
 public class AlertConfiguration : IEntityTypeConfiguration<Alert>
 {

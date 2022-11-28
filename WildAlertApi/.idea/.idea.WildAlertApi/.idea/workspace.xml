@@ -9,29 +9,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="i don't know what happened here">
-      <change beforePath="$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlertApi.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Extensions/ValidationResultExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Extensions/WebApplicationExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Migrations/20221119163527_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Migrations/20221119163527_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/Alert.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/AlertConfiguration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/AnimalType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/CreateAlert.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/CreateAlertValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/GetAlertQueryValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/Alerts/GetAlertsQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Models/ApplicationDbContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlertApi/docker-compose.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="develop" />
+      </map>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Models/Alerts/Alert.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Models/Alerts/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Models/Alerts/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Models/Alerts/CreateAlert.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Models/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Krysia/RiderProjects/wild-alert-api/WildAlertApi/WildAlertApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlertApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/Alert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/CreateAlertValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/GetAlertQueryValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/Alerts/GetAlertsQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Models/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HlhnB3DtjljNtV6yElaDoWWQzu" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -40,23 +72,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WildAlertApi">
     <configuration name="WildAlertApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="WildAlertApi" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -71,7 +103,7 @@
       </method>
     </configuration>
     <configuration name="WildAlertApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WildAlertApi/WildAlertApi.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -96,6 +128,7 @@
       <updated>1668865747764</updated>
       <workItem from="1668865754852" duration="3028000" />
       <workItem from="1668876642715" duration="1758000" />
+      <workItem from="1669651663579" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -152,6 +185,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="merge commit" />
     <MESSAGE value="Hubert said 'commit' I commited" />
     <MESSAGE value="i don't know what happened here" />

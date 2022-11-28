@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WildAlertApi.Migrations
+namespace WildAlert.Api.Migrations
 {
     public partial class Initial : Migration
     {

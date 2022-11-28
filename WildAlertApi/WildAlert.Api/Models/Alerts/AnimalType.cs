@@ -1,4 +1,4 @@
-﻿namespace WildAlertApi.Models.Alerts;
+﻿namespace WildAlert.Api.Models.Alerts;
 
 public enum AnimalType
 {

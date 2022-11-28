@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WildAlertApi.Models.Alerts;
+namespace WildAlert.Api.Models.Alerts;
 
 public class CreateAlertValidator : AbstractValidator<CreateAlert>
 {

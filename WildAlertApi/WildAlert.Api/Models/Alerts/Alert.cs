@@ -1,4 +1,4 @@
-namespace WildAlertApi.Models.Alerts;
+namespace WildAlert.Api.Models.Alerts;
 public class Alert
 {
     public Guid Id { get; set; }

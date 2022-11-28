@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using WildAlertApi.Models;
+using WildAlert.Api.Models;
 
 #nullable disable
 
-namespace WildAlertApi.Migrations
+namespace WildAlert.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20221119163527_Initial")]
@@ -24,7 +24,7 @@ namespace WildAlertApi.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("WildAlertApi.Models.Alerts.Alert", b =>
+            modelBuilder.Entity("WildAlert.Api.Models.Alerts.Alert", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,9 +1,9 @@
 using System.Text.Json.Serialization;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
-using WildAlertApi.Extensions;
-using WildAlertApi.Models;
-using WildAlertApi.Models.Alerts;
+using WildAlert.Api.Extensions;
+using WildAlert.Api.Models;
+using WildAlert.Api.Models.Alerts;
 
 var builder = WebApplication.CreateBuilder(args);
 

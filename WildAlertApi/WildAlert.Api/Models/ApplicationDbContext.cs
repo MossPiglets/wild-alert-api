@@ -1,8 +1,8 @@
 ﻿using System.Security.Cryptography.Xml;
 using Microsoft.EntityFrameworkCore;
-using WildAlertApi.Models.Alerts;
+using WildAlert.Api.Models.Alerts;
 
-namespace WildAlertApi.Models;
+namespace WildAlert.Api.Models;
 
 public class ApplicationDbContext : DbContext 
 {
