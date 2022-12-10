@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WildAlert.Api.Models.Alerts;
+namespace WildAlert.Application.Requests.Alerts.Queries.GetQuery;
 
 public class GetAlertQueryValidator : AbstractValidator<GetAlertsQuery>
 {
