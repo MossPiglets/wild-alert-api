@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WildAlert.Api.Models;
 using WildAlert.Persistence;
 
 namespace WildAlert.Api.Extensions;
