@@ -8,7 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="" />
+    <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQuery.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +31,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/227ed75384c24c09bd6a4ae4ff4c1534a23898/_ec32c/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/227ed75384c24c09bd6a4ae4ff4c1534a23898/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74593cffda1e21b56a94f6f59cddd42c17913e780fbd31c3cd6f1d9455b59f4/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1558d44394b3be0f45e5cfe17d84d06c60a9ea79543868636a2edb57c2342/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
@@ -47,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WildAlertApi">
     <configuration name="WildAlertApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" />
@@ -104,7 +118,8 @@
       <workItem from="1668865754852" duration="3028000" />
       <workItem from="1668876642715" duration="1758000" />
       <workItem from="1669651663579" duration="6867000" />
-      <workItem from="1670664091415" duration="992000" />
+      <workItem from="1670664091415" duration="1144000" />
+      <workItem from="1670864583591" duration="9122000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>

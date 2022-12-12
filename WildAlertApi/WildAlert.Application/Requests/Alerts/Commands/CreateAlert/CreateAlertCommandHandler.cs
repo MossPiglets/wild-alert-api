@@ -24,8 +24,8 @@ public class CreateAlertCommandHandler : IRequestHandler<CreateAlertCommand, Ale
             Longitude = request.Longitude,
             Id = Guid.NewGuid()
         };
-        _context.Alerts.Add(alertEntity);
-        await _context.SaveChangesAsync(cancellationToken);
+        _context.Alerts.Add(alertEntity); 
+        await _context.SaveChangesAsync(cancellationToken); 
         
         var alertDto = new AlertDto() { 
             Animal = alertEntity.Animal,

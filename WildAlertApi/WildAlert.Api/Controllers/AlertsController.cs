@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Application.Requests.Alerts.Queries.GetQuery;
@@ -15,21 +16,19 @@ namespace WildAlert.Api.Controllers;
 [Route("[controller]")]
 public class AlertsController : ControllerBase
 {
-    private readonly ILogger<AlertsController> _logger;
     private readonly ApplicationDbContext _context;
     private readonly IMediator _mediator;
 
-    public AlertsController(ILogger<AlertsController> logger, ApplicationDbContext context, Mediator mediator)
+    public AlertsController(ApplicationDbContext context, IMediator mediator)
     {
-        _logger = logger;
         _context = context;
         _mediator = mediator;
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(CreateAlertCommand request, [FromServices] IValidator<CreateAlertCommand> validator)
+    public async Task<IActionResult> Post(CreateAlertCommand request, [FromServices] IValidator<CreateAlertCommand> validator, CancellationToken token)
     {
-        ValidationResult result = validator.Validate(request);
+        ValidationResult result = await validator.ValidateAsync(request, token);
         
         if (!result.IsValid)
         {
@@ -37,28 +36,28 @@ public class AlertsController : ControllerBase
             return BadRequest(this.ModelState);
         }
 
-        var alert = await _mediator.Send(request);
+        var alert = await _mediator.Send(request, token);
         return Ok(alert);
     }
     
     
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<AlertEntity>), (int) HttpStatusCode.OK)]
-    public IActionResult Get([FromQuery] GetAlertsQuery query, [FromServices] IValidator<GetAlertsQuery> validator)
+    public async Task<IActionResult> Get([FromQuery] GetAlertsQuery query, [FromServices] IValidator<GetAlertsQuery> validator, CancellationToken token)
     {
-        ValidationResult result = validator.Validate(query);
+        ValidationResult result = await validator.ValidateAsync(query, token);
         if (!result.IsValid)
         {
             result.AddToModelState(this.ModelState);
             return BadRequest(this.ModelState);
         }
-
+        //logikę przenieść do handlera
         const double radius = 0.016;
-        IEnumerable<AlertEntity> alerts = _context.Alerts
+        var alerts = await _context.Alerts
             .Where(x => (query.Latitude==null || query.Longitude==null) ||
                         ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
                         (x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius)))
-            .ToList();       
+            .ToListAsync(token);       
         return Ok(alerts);
     }
 }

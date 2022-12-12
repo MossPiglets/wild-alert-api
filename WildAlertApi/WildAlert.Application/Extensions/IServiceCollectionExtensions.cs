@@ -10,7 +10,7 @@ public static class IServiceCollectionExtensions
 {
     public static void AddApplication(this IServiceCollection services)
     {
-        services.AddMediatR(typeof(IApplicationMarker).Assembly);
+        services.AddMediatR(typeof(IApplicationMarker));
         
         // Fluent validation
         services.AddValidatorsFromAssemblyContaining<IApplicationMarker>();
