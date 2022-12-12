@@ -52,12 +52,13 @@ public class AlertsController : ControllerBase
             return BadRequest(this.ModelState);
         }
         //logikę przenieść do handlera
-        const double radius = 0.016;
-        var alerts = await _context.Alerts
-            .Where(x => (query.Latitude==null || query.Longitude==null) ||
-                        ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
-                        (x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius)))
-            .ToListAsync(token);       
+        // const double radius = 0.016;
+        // var alerts = await _context.Alerts
+        //     .Where(x => (query.Latitude==null || query.Longitude==null) ||
+        //                 ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
+        //                 (x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius)))
+        //     .ToListAsync(token);   
+        var alerts = await _mediator.Send(query, token);
         return Ok(alerts);
     }
 }
