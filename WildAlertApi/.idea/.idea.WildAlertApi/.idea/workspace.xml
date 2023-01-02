@@ -9,14 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertCommandHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/WildAlert.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/WildAlert.Application.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +34,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74593cffda1e21b56a94f6f59cddd42c17913e780fbd31c3cd6f1d9455b59f4/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1558d44394b3be0f45e5cfe17d84d06c60a9ea79543868636a2edb57c2342/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fd3613e79f4141b726a234dc6b12c9e2fa50a7be28b045e19275c69bbf1166/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
@@ -76,8 +73,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Krysia\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Krysia\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Krysia\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WildAlertApi">
@@ -126,6 +130,7 @@
       <workItem from="1670664091415" duration="1144000" />
       <workItem from="1670864583591" duration="12547000" />
       <workItem from="1671467238293" duration="3250000" />
+      <workItem from="1672676795772" duration="1534000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>

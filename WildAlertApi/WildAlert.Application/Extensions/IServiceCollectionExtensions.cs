@@ -1,4 +1,6 @@
 using FluentValidation;
+using Mapster;
+using MapsterMapper;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,5 +15,11 @@ public static class IServiceCollectionExtensions
         
         // Fluent validation
         services.AddValidatorsFromAssemblyContaining<IApplicationMarker>();
+        
+        //Mapster
+        var config = new TypeAdapterConfig();
+        services.AddSingleton(config);
+        services.AddScoped<IMapper, ServiceMapper>();
     }
+    
 }

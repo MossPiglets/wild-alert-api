@@ -1,3 +1,4 @@
+using MapsterMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Persistence;
@@ -7,10 +8,13 @@ namespace WildAlert.Application.Requests.Alerts.Queries.GetQuery;
 public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable<AlertDto>>
 {
     private readonly ApplicationDbContext _context;
+    private readonly IMapper _mapper;
 
-    public GetAlertsQueryHandler(ApplicationDbContext context)
+
+    public GetAlertsQueryHandler(ApplicationDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     public async Task<IEnumerable<AlertDto>> Handle(GetAlertsQuery query, CancellationToken cancellationToken)
@@ -20,15 +24,7 @@ public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable
             .Where(x => query.Latitude == null || query.Longitude == null ||
                         (x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius &&
                          x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius))
-            .Select(alert => new AlertDto
-            {
-                Animal = alert.Animal,
-                Comments = alert.Comments,
-                CreatedAt = alert.CreatedAt,
-                Latitude = alert.Latitude,
-                Longitude = alert.Longitude,
-                Id = alert.Id
-            })
+            .Select(alert => _mapper.Map<AlertDto>(alert))
             .ToListAsync(cancellationToken);
     }
 }
