@@ -3,9 +3,9 @@ using WildAlert.Persistence.Entities.Alert;
 
 namespace WildAlert.Persistence;
 
-public class ApplicationDbContext : DbContext 
+public class ApplicationDbContext : DbContext
 {
-    public DbSet<AlertEntity> Alerts { get; set; }
+    public DbSet<AlertEntity> Alerts => Set<AlertEntity>();
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 

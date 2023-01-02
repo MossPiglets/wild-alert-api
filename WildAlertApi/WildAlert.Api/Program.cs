@@ -1,23 +1,11 @@
 using System.Text.Json.Serialization;
-using FluentValidation;
-using Microsoft.EntityFrameworkCore;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Extensions;
-using WildAlert.Persistence;
+using WildAlert.Persistence.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbContext>(x =>
-{
-    string connectionString;
-    if (builder.Environment.IsProduction())
-        connectionString = new HerokuDbConnector.HerokuDbConnector().Build();
-    else
-        connectionString = builder.Configuration.GetConnectionString("default");
-    
-    x.UseNpgsql(connectionString);
-});
-
+builder.Services.AddPersistence(builder.Environment, builder.Configuration);
 // Add services to the container.
 
 builder.Services.AddControllers()
@@ -28,7 +16,6 @@ builder.Services.AddApplication();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 
 builder.Services.AddCors();
 

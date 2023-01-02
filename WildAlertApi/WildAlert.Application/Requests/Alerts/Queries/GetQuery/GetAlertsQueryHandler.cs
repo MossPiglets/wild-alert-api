@@ -12,29 +12,23 @@ public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable
     {
         _context = context;
     }
+
     public async Task<IEnumerable<AlertDto>> Handle(GetAlertsQuery query, CancellationToken cancellationToken)
     {
         const double radius = 0.016;
-        var alertsAlertEntity = await _context.Alerts
-            .Where(x => (query.Latitude==null || query.Longitude==null) ||
-                        ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
-                         (x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius)))
-            .ToListAsync(cancellationToken);
-
-        List<AlertDto> alertsAlertDto = new();
-        
-        foreach (var alert in alertsAlertEntity)
-        {
-            alertsAlertDto.Add( new AlertDto() { 
+        return await _context.Alerts
+            .Where(x => query.Latitude == null || query.Longitude == null ||
+                        (x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius &&
+                         x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius))
+            .Select(alert => new AlertDto
+            {
                 Animal = alert.Animal,
                 Comments = alert.Comments,
                 CreatedAt = alert.CreatedAt,
                 Latitude = alert.Latitude,
                 Longitude = alert.Longitude,
                 Id = alert.Id
-            });
-        }
-        
-        return alertsAlertDto;
+            })
+            .ToListAsync(cancellationToken);
     }
 }

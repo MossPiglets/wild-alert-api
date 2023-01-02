@@ -7,10 +7,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\WildAlert.Shared\WildAlert.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="HerokuDbConnector" Version="1.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.7" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />

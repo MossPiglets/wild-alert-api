@@ -3,11 +3,9 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Application.Requests.Alerts.Queries.GetQuery;
-using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Alert;
 
 namespace WildAlert.Api.Controllers;
@@ -16,12 +14,10 @@ namespace WildAlert.Api.Controllers;
 [Route("[controller]")]
 public class AlertsController : ControllerBase
 {
-    private readonly ApplicationDbContext _context;
     private readonly IMediator _mediator;
 
-    public AlertsController(ApplicationDbContext context, IMediator mediator)
+    public AlertsController(IMediator mediator)
     {
-        _context = context;
         _mediator = mediator;
     }
 
@@ -51,13 +47,7 @@ public class AlertsController : ControllerBase
             result.AddToModelState(this.ModelState);
             return BadRequest(this.ModelState);
         }
-        //logikę przenieść do handlera
-        // const double radius = 0.016;
-        // var alerts = await _context.Alerts
-        //     .Where(x => (query.Latitude==null || query.Longitude==null) ||
-        //                 ((x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius) &&
-        //                 (x.Longitude < query.Longitude + radius && x.Longitude > query.Longitude - radius)))
-        //     .ToListAsync(token);   
+
         var alerts = await _mediator.Send(query, token);
         return Ok(alerts);
     }

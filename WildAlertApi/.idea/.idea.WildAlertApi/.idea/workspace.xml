@@ -11,7 +11,12 @@
     <list default="true" id="3d0b7c57-00e1-4839-8561-0589412ac6c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WildAlertApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Api/WildAlert.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Extensions/IServiceCollectionExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WildAlert.Persistence/WildAlert.Persistence.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e79aa56d39ef442e881de175f93282e51a00/2a/cd7436c6/HerokuDbConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e79aa56d39ef442e881de175f93282e51a00/a1/44490af4/HerokuDbConnectionOption.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/227ed75384c24c09bd6a4ae4ff4c1534a23898/_ec32c/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/227ed75384c24c09bd6a4ae4ff4c1534a23898/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
@@ -45,6 +52,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2HlhnB3DtjljNtV6yElaDoWWQzu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -66,7 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -114,7 +124,8 @@
       <workItem from="1668876642715" duration="1758000" />
       <workItem from="1669651663579" duration="6867000" />
       <workItem from="1670664091415" duration="1144000" />
-      <workItem from="1670864583591" duration="12382000" />
+      <workItem from="1670864583591" duration="12547000" />
+      <workItem from="1671467238293" duration="3250000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -187,5 +198,9 @@
     <MESSAGE value="i don't know what happened here" />
     <MESSAGE value="initial refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="initial refactoring" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
