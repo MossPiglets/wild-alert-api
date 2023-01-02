@@ -1,0 +1,32 @@
+using MapsterMapper;
+using MediatR;
+using WildAlert.Persistence;
+using WildAlert.Persistence.Entities.Alert;
+
+namespace WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
+
+public class CreateAlertCommandHandler : IRequestHandler<CreateAlertCommand, AlertDto>
+{
+    private readonly ApplicationDbContext _context;
+    private readonly IMapper _mapper;
+
+
+    public CreateAlertCommandHandler(ApplicationDbContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
+    
+    public async Task<AlertDto> Handle(CreateAlertCommand request, CancellationToken cancellationToken)
+    {
+        AlertEntity alertEntity = _mapper.Map<AlertEntity>(request);
+        alertEntity.CreatedAt = DateTime.UtcNow;
+        alertEntity.Id = Guid.NewGuid();
+
+        _context.Alerts.Add(alertEntity); 
+        await _context.SaveChangesAsync(cancellationToken);
+
+        var alertDto = _mapper.Map<AlertDto>(alertEntity);
+        return alertDto;
+    }
+}
