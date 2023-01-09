@@ -21,7 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\WildAlert.Api\WildAlert.Api.csproj" />
-      <ProjectReference Include="..\WildAlery.Tests.Shared\WildAlery.Tests.Shared.csproj" />
+      <ProjectReference Include="..\WildAlert.Tests.Shared\WildAlert.Tests.Shared.csproj" />
     </ItemGroup>
 
 </Project>

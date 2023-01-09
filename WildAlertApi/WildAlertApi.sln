@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildAlert.UnitTests", "Wild
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildAlert.IntegrationTests", "WildAlert.IntegrationTests\WildAlert.IntegrationTests.csproj", "{7A1414A5-0F5E-47C9-8BD0-331BAFEBCE2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildAlery.Tests.Shared", "WildAlery.Tests.Shared\WildAlery.Tests.Shared.csproj", "{87F8C3AA-2308-4C3D-A029-BFA54F441B8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildAlert.Tests.Shared", "WildAlert.Tests.Shared\WildAlert.Tests.Shared.csproj", "{87F8C3AA-2308-4C3D-A029-BFA54F441B8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
