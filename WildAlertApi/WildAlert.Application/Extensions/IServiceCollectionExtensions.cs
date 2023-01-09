@@ -3,6 +3,7 @@ using Mapster;
 using MapsterMapper;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using WildAlert.Shared.DateTimeProvider;
 
 namespace WildAlert.Application.Extensions;
 
@@ -20,6 +21,8 @@ public static class IServiceCollectionExtensions
         var config = new TypeAdapterConfig();
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
+
+        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
     }
     
 }

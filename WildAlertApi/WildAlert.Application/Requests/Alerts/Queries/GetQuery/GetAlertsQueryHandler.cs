@@ -19,7 +19,7 @@ public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable
 
     public async Task<IEnumerable<AlertDto>> Handle(GetAlertsQuery query, CancellationToken cancellationToken)
     {
-        const double radius = 0.016;
+        double radius = 0.008 * query.Radius;
         return await _context.Alerts
             .Where(x => query.Latitude == null || query.Longitude == null ||
                         (x.Latitude < query.Latitude + radius && x.Latitude > query.Latitude - radius &&

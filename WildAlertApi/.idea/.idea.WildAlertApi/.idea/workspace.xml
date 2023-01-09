@@ -46,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.UnitTests/CreateAlertCommandHandlerTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

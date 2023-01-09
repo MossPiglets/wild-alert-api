@@ -1,4 +1,3 @@
-using System.Security.Cryptography.Xml;
 using FluentValidation;
 
 namespace WildAlert.Application.Requests.Alerts.Queries.GetQuery;
