@@ -134,6 +134,7 @@
       <workItem from="1672676795772" duration="1534000" />
       <workItem from="1672678999541" duration="968000" />
       <workItem from="1673264579088" duration="1315000" />
+      <workItem from="1673344794425" duration="6379000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -206,6 +207,43 @@
     <MESSAGE value="i don't know what happened here" />
     <MESSAGE value="initial refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="initial refactoring" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/GetAlertsQueryHandlerTests.cs</url>
+          <line>76</line>
+          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\GetAlertsQueryHandlerTests.cs" initialLine="79" containingFunctionPresentation="method 'Handle_WhenLongitudeAndLatitudeIsGiven_ShouldReturnAlertsInRadius'">
+            <startOffsets>
+              <option value="2849" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3076" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/GetAlertsQueryHandlerTests.cs</url>
+          <line>72</line>
+          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\GetAlertsQueryHandlerTests.cs" initialLine="72" containingFunctionPresentation="method 'Handle_WhenLongitudeAndLatitudeIsGiven_ShouldReturnAlertsInRadius'">
+            <startOffsets>
+              <option value="2711" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2772" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="RiderUnitTests">
+        <watch expression="latitude" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
