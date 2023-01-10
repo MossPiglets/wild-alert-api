@@ -31,6 +31,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e79aa56d39ef442e881de175f93282e51a00/a1/44490af4/HerokuDbConnectionOption.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/227ed75384c24c09bd6a4ae4ff4c1534a23898/_ec32c/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/227ed75384c24c09bd6a4ae4ff4c1534a23898/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2656e3487208acb3487490904326ac4e1fdc62459bbaf6dc682863a3c37a/ParameterExpression.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74593cffda1e21b56a94f6f59cddd42c17913e780fbd31c3cd6f1d9455b59f4/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1558d44394b3be0f45e5cfe17d84d06c60a9ea79543868636a2edb57c2342/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,7 +135,7 @@
       <workItem from="1672676795772" duration="1534000" />
       <workItem from="1672678999541" duration="968000" />
       <workItem from="1673264579088" duration="1315000" />
-      <workItem from="1673344794425" duration="6379000" />
+      <workItem from="1673344794425" duration="9655000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -209,36 +210,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial refactoring" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/GetAlertsQueryHandlerTests.cs</url>
-          <line>76</line>
-          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\GetAlertsQueryHandlerTests.cs" initialLine="79" containingFunctionPresentation="method 'Handle_WhenLongitudeAndLatitudeIsGiven_ShouldReturnAlertsInRadius'">
-            <startOffsets>
-              <option value="2849" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3076" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/GetAlertsQueryHandlerTests.cs</url>
-          <line>72</line>
-          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\GetAlertsQueryHandlerTests.cs" initialLine="72" containingFunctionPresentation="method 'Handle_WhenLongitudeAndLatitudeIsGiven_ShouldReturnAlertsInRadius'">
-            <startOffsets>
-              <option value="2711" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2772" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="RiderUnitTests">
         <watch expression="latitude" />
