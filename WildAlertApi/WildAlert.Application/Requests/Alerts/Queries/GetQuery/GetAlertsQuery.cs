@@ -6,6 +6,8 @@ public class GetAlertsQuery : IRequest<IEnumerable<AlertDto>>
 {
     public double? Longitude { get; set; }
     public double? Latitude { get; set; }
-
-    public double Radius { get; set; } = 2;
+    /// <summary>
+    /// Radius for filtering alerts [km]
+    /// </summary>
+    public double Radius { get; set; } = 2; 
 }
