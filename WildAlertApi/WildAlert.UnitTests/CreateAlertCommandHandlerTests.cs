@@ -3,7 +3,7 @@ using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Persistence;
-using WildAlert.Persistence.Entities.Alert;
+using WildAlert.Persistence.Entities.Alerts;
 using WildAlert.Shared.DateTimeProvider;
 using WildAlert.Tests.Shared.DateTimeProvider;
 using WildAlert.UnitTests.Factories;

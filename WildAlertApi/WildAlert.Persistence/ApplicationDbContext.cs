@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WildAlert.Persistence.Entities.Alert;
+using WildAlert.Persistence.Entities.Alerts;
 
 namespace WildAlert.Persistence;
 

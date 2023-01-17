@@ -1,4 +1,4 @@
-namespace WildAlert.Persistence.Entities.Alert;
+namespace WildAlert.Persistence.Entities.Alerts;
 public class AlertEntity
 {
     public Guid Id { get; set; }

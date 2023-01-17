@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace WildAlert.Persistence.Entities.Alert;
+namespace WildAlert.Persistence.Entities.Alerts;
 
 public class AlertConfiguration : IEntityTypeConfiguration<AlertEntity>
 {

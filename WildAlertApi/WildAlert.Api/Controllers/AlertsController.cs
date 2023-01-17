@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Application.Requests.Alerts.Queries.GetQuery;
-using WildAlert.Persistence.Entities.Alert;
+using WildAlert.Persistence.Entities.Alerts;
 
 namespace WildAlert.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class AlertsController : ControllerBase
 {
     private readonly IMediator _mediator;
