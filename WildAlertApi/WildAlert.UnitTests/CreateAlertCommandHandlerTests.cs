@@ -6,6 +6,7 @@ using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Alert;
 using WildAlert.Shared.DateTimeProvider;
 using WildAlert.Tests.Shared.DateTimeProvider;
+using WildAlert.UnitTests.Factories;
 
 namespace WildAlert.UnitTests;
 
@@ -18,11 +19,7 @@ public class CreateAlertCommandHandlerTests
     [SetUp]
     public void Setup()
     {
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString())
-            .Options;
-        
-        _context = new ApplicationDbContext(options);
+        _context = ApplicationDbContextFactory.Create();
         _mapper = new Mapper();
         _dateTimeProvider = new TestDateTimeProvider();
     }

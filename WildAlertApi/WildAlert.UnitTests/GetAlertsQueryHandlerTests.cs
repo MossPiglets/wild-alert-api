@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WildAlert.Application.Requests.Alerts.Queries.GetQuery;
 using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Alert;
+using WildAlert.UnitTests.Factories;
 
 namespace WildAlert.UnitTests;
 
@@ -11,25 +12,22 @@ public class GetAlertsQueryHandlerTests
 {
     private ApplicationDbContext _context = null!;
     private IMapper _mapper = null!;
+    private readonly double _oneKilometerInDegrees = 0.008;
     
     [SetUp]
     public void Setup()
     {
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString())
-            .Options;
-        
-        _context = new ApplicationDbContext(options);
+        _context = ApplicationDbContextFactory.Create();
         _mapper = new Mapper();
         
         // Add alert examples
         var alerts = new List<AlertEntity>()
         {
             new() {Latitude = 50, Longitude = 20, Comments = "the center"},
-            new() {Latitude = 50+2*0.08, Longitude = 20, Comments = "2 km north from the center"},
-            new() {Latitude = 50, Longitude = 20-5*0.08, Comments = "5 km west from the center"},
-            new() {Latitude = 50-10*0.08, Longitude = 20, Comments = "10km south from the center"},
-            new() {Latitude = 50, Longitude = 20+25*0.08, Comments = "25km east from the center"}
+            new() {Latitude = 50+2*_oneKilometerInDegrees, Longitude = 20, Comments = "2 km north from the center"},
+            new() {Latitude = 50, Longitude = 20-5*_oneKilometerInDegrees, Comments = "5 km west from the center"},
+            new() {Latitude = 50-10*_oneKilometerInDegrees, Longitude = 20, Comments = "10km south from the center"},
+            new() {Latitude = 50, Longitude = 20+25*_oneKilometerInDegrees, Comments = "25km east from the center"}
         };
         _context.Alerts.AddRange(alerts);
         _context.SaveChanges();
