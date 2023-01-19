@@ -1,4 +1,3 @@
-using MapsterMapper;
 using MediatR;
 using MediatR.AspNet.Exceptions;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +10,7 @@ public class DeleteSensorCommandHandler : IRequestHandler<DeleteSensorCommand>
 {
     private readonly ApplicationDbContext _context;
     
-    public DeleteSensorCommandHandler(ApplicationDbContext context, IMapper mapper)
+    public DeleteSensorCommandHandler(ApplicationDbContext context)
     {
         _context = context;
     }

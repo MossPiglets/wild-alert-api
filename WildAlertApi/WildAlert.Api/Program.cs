@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using MediatR.AspNet;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Extensions;
 using WildAlert.Persistence.Extensions;
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistence(builder.Environment, builder.Configuration);
 // Add services to the container.
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(o => o.Filters.AddMediatrExceptions())
     .AddJsonOptions(x => x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddApplication();
 

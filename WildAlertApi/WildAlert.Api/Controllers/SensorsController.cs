@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
+using WildAlert.Application.Requests.Sensors.Commands.UpdateSensor;
 
 namespace WildAlert.Api.Controllers;
 
@@ -44,5 +45,20 @@ public class SensorsController:ControllerBase
 
         _mediator.Send(command);
         return Ok();
+    }
+    
+    [HttpPut("{id:guid}")]
+    public async Task<IActionResult> Put(UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
+    {
+        ValidationResult result = await validator.ValidateAsync(request, token);
+        
+        if (!result.IsValid)
+        {
+            result.AddToModelState(this.ModelState);
+            return BadRequest(this.ModelState);
+        }
+        
+        var sensor = await _mediator.Send(request, token);
+        return Ok(sensor);
     }
 }
