@@ -1,3 +1,4 @@
+using System.Net;
 using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
@@ -6,6 +7,8 @@ using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
 using WildAlert.Application.Requests.Sensors.Commands.UpdateSensor;
+using WildAlert.Application.Requests.Sensors.Queries.GetSensorsQuery;
+using WildAlert.Persistence.Entities.Sensors;
 
 namespace WildAlert.Api.Controllers;
 
@@ -60,5 +63,13 @@ public class SensorsController:ControllerBase
         
         var sensor = await _mediator.Send(request, token);
         return Ok(sensor);
+    }
+    
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<SensorEntity>), (int) HttpStatusCode.OK)]
+    public async Task<IActionResult> Get([FromQuery] GetSensorsQuery query, CancellationToken token)
+    {
+        var sensors = await _mediator.Send(query, token);
+        return Ok(sensors);
     }
 }

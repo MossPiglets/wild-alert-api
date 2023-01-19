@@ -9,8 +9,7 @@ public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable
 {
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
-
-
+    
     public GetAlertsQueryHandler(ApplicationDbContext context, IMapper mapper)
     {
         _context = context;
