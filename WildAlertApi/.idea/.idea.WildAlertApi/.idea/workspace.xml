@@ -141,7 +141,7 @@
       <workItem from="1673617047250" duration="567000" />
       <workItem from="1673971141312" duration="3525000" />
       <workItem from="1674048829438" duration="1903000" />
-      <workItem from="1674121667915" duration="12518000" />
+      <workItem from="1674121667915" duration="14422000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -216,6 +216,36 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial refactoring" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/UpdateSensorCommandHandlerTests.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\UpdateSensorCommandHandlerTests.cs" initialLine="42" containingFunctionPresentation="method 'Handle_ShouldUpdateAndReturnAlert'">
+            <startOffsets>
+              <option value="1327" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1390" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/UpdateSensorCommandHandlerTests.cs</url>
+          <line>44</line>
+          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\UpdateSensorCommandHandlerTests.cs" initialLine="44" containingFunctionPresentation="method 'Handle_ShouldUpdateAndReturnAlert'">
+            <startOffsets>
+              <option value="1417" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1512" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="RiderUnitTests">
         <watch expression="latitude" />
