@@ -2,7 +2,7 @@ using MediatR;
 
 namespace WildAlert.Application.Requests.Sensors.Commands.UpdateSensor;
 
-public class UpdateSensorCommand : IRequest
+public class UpdateSensorCommand : IRequest<SensorDto>
 {
     public Guid Id { get; set; }
     public string? Name { get; set; }

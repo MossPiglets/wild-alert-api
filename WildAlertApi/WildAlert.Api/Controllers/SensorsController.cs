@@ -36,14 +36,14 @@ public class SensorsController:ControllerBase
     }
 
     [HttpDelete("{id:guid}")]
-    public IActionResult Delete(Guid id)
+    public async Task<IActionResult> Delete(Guid id)
     {
         var command = new DeleteSensorCommand()
         {
             Id = id
         };
 
-        _mediator.Send(command);
+        await _mediator.Send(command);
         return Ok();
     }
     
