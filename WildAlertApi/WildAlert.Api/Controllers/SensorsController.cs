@@ -4,8 +4,9 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
+using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
 
-namespace WildSensor.Api.Controllers;
+namespace WildAlert.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -31,5 +32,17 @@ public class SensorsController:ControllerBase
 
         var sensor = await _mediator.Send(request, token);
         return Ok(sensor);
-    } 
+    }
+
+    [HttpDelete("{id:guid}")]
+    public IActionResult Delete(Guid id)
+    {
+        var command = new DeleteSensorCommand()
+        {
+            Id = id
+        };
+
+        _mediator.Send(command);
+        return Ok();
+    }
 }

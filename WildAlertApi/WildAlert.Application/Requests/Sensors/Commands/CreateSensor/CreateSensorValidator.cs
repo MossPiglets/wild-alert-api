@@ -1,5 +1,4 @@
 using FluentValidation;
-using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 
 namespace WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 
