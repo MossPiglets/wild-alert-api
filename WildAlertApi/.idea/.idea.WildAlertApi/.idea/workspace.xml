@@ -40,12 +40,12 @@
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Commands/CreateAlert/CreateAlertValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertQueryValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetQuery/GetAlertsQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetAlerts/GetAlertsQuery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Application/Requests/Alerts/Queries/GetAlerts/GetAlertsQueryValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AlertEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alert/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alerts/AlertConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alerts/AlertEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Entities/Alerts/AnimalType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Persistence/Migrations/20221119163527_Initial.Designer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -137,7 +137,9 @@
       <workItem from="1673344794425" duration="9655000" />
       <workItem from="1673615035159" duration="1316000" />
       <workItem from="1673617047250" duration="567000" />
-      <workItem from="1673971141312" duration="1515000" />
+      <workItem from="1673971141312" duration="3525000" />
+      <workItem from="1674048829438" duration="1903000" />
+      <workItem from="1674121667915" duration="914000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>

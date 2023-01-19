@@ -5,7 +5,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
-using WildAlert.Application.Requests.Alerts.Queries.GetQuery;
+using WildAlert.Application.Requests.Alerts.Queries.GetAlerts;
 using WildAlert.Persistence.Entities.Alerts;
 
 namespace WildAlert.Api.Controllers;

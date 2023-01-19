@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Persistence;
 
-namespace WildAlert.Application.Requests.Alerts.Queries.GetQuery;
+namespace WildAlert.Application.Requests.Alerts.Queries.GetAlerts;
 
 public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable<AlertDto>>
 {

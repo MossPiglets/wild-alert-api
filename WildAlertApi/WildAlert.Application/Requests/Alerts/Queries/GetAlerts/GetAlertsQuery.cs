@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace WildAlert.Application.Requests.Alerts.Queries.GetQuery;
+namespace WildAlert.Application.Requests.Alerts.Queries.GetAlerts;
 
 public class GetAlertsQuery : IRequest<IEnumerable<AlertDto>>
 {

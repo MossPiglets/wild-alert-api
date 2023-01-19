@@ -1,7 +1,7 @@
 using FluentAssertions;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
-using WildAlert.Application.Requests.Alerts.Queries.GetQuery;
+using WildAlert.Application.Requests.Alerts.Queries.GetAlerts;
 using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Alerts;
 using WildAlert.UnitTests.Factories;
