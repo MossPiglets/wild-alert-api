@@ -1,4 +1,4 @@
-using WildAlert.Persistence.Entities.Alert;
+using WildAlert.Persistence.Entities.Alerts;
 
 namespace WildAlert.Application.Requests.Alerts;
 

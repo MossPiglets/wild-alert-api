@@ -3,14 +3,13 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Persistence;
 
-namespace WildAlert.Application.Requests.Alerts.Queries.GetQuery;
+namespace WildAlert.Application.Requests.Alerts.Queries.GetAlerts;
 
 public class GetAlertsQueryHandler : IRequestHandler<GetAlertsQuery, IEnumerable<AlertDto>>
 {
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
-
-
+    
     public GetAlertsQueryHandler(ApplicationDbContext context, IMapper mapper)
     {
         _context = context;
