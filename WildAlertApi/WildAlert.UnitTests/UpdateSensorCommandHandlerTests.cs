@@ -1,6 +1,8 @@
 using FluentAssertions;
 using MapsterMapper;
+using MediatR.AspNet.Exceptions;
 using Microsoft.EntityFrameworkCore;
+using NSubstitute.ExceptionExtensions;
 using WildAlert.Application.Requests.Sensors.Commands.UpdateSensor;
 using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Sensors;
@@ -45,5 +47,26 @@ public class UpdateSensorCommandHandlerTests
         result.Latitude.Should().Be(command.Latitude);
         result.Name.Should().Be(command.Name);
         result.Id.Should().NotBeEmpty();
+    }
+    
+    [Test]
+    public async Task Handle_WhenGivenIncorrectOrNonExistingId_ShouldThrowException()
+    {
+        //Arrange
+        var sut = new UpdateSensorCommandHandler(_context, _mapper);
+        var command = new UpdateSensorCommand
+        {
+            Id =  new Guid("bf0815ad-3255-41e6-9fe2-e801db877c21"),
+            Longitude = 20,
+            Latitude = 30,
+            Name = "updated sensor",
+        };
+        //Act
+        Func<Task> result = async () =>
+        {
+            await sut.Handle(command, CancellationToken.None);
+        };
+        //Assert
+        await result.Should().ThrowAsync<NotFoundException>();
     }
 }

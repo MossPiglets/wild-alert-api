@@ -36,6 +36,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5594f0dce42a5fa5c7c6715d1914bc807ec0fe61ac77dd6bbe254708946/RuntimeAssembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6cc6dede52aab6345bbde5d36881fd55b017f53c84c78824d182f9a62c8291f/ISender.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74593cffda1e21b56a94f6f59cddd42c17913e780fbd31c3cd6f1d9455b59f4/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/76c0e4122422fa498e2c6d284ca4ce48027c1d21d7b596dc50cbd9baa05b49/SwaggerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1558d44394b3be0f45e5cfe17d84d06c60a9ea79543868636a2edb57c2342/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fd3613e79f4141b726a234dc6b12c9e2fa50a7be28b045e19275c69bbf1166/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WildAlert.Api/Controllers/AlertsController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -142,6 +143,7 @@
       <workItem from="1673971141312" duration="3525000" />
       <workItem from="1674048829438" duration="1903000" />
       <workItem from="1674121667915" duration="15726000" />
+      <workItem from="1674290661632" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
