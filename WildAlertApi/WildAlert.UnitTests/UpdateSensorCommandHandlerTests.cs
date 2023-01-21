@@ -62,10 +62,7 @@ public class UpdateSensorCommandHandlerTests
             Name = "updated sensor",
         };
         //Act
-        Func<Task> result = async () =>
-        {
-            await sut.Handle(command, CancellationToken.None);
-        };
+        Func<Task> result = () =>sut.Handle(command, CancellationToken.None);
         //Assert
         await result.Should().ThrowAsync<NotFoundException>();
     }
