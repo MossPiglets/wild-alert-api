@@ -51,7 +51,7 @@ public class SensorsController:ControllerBase
     }
     
     [HttpPut("{id:guid}")]
-    public async Task<IActionResult> Put(UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
+    public async Task<IActionResult> Put(Guid id, UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
         
@@ -60,7 +60,8 @@ public class SensorsController:ControllerBase
             result.AddToModelState(this.ModelState);
             return BadRequest(this.ModelState);
         }
-        
+
+        request.Id = id;
         var sensor = await _mediator.Send(request, token);
         return Ok(sensor);
     }
