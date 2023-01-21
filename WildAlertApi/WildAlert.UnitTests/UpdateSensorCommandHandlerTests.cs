@@ -2,7 +2,6 @@ using FluentAssertions;
 using MapsterMapper;
 using MediatR.AspNet.Exceptions;
 using Microsoft.EntityFrameworkCore;
-using NSubstitute.ExceptionExtensions;
 using WildAlert.Application.Requests.Sensors.Commands.UpdateSensor;
 using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Sensors;
