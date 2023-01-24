@@ -5,7 +5,7 @@ using WildAlert.Application.Requests.SensorData.Commands.CreateSensorData;
 namespace WildAlert.Api.Controllers;
 
 [ApiController]
-[Route("api/sensors/{sensorId}/data")]
+[Route("api/sensors/")]
 public class SensorDataController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -15,9 +15,10 @@ public class SensorDataController : ControllerBase
         _mediator = mediator;
     }
     
-    [HttpPost]
-    public async Task<IActionResult> Post(CreateSensorDataCommand request, CancellationToken token)
+    [HttpPost("{sensorId:guid}/data")]
+    public async Task<IActionResult> Post(Guid sensorId, CreateSensorDataCommand request, CancellationToken token)
     {
+        request.SensorId = sensorId;
         var sensor = await _mediator.Send(request, token);
         return Ok(sensor);
     }

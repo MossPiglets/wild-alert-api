@@ -1,7 +1,10 @@
 using MapsterMapper;
 using MediatR;
+using MediatR.AspNet.Exceptions;
+using Microsoft.EntityFrameworkCore;
 using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.SensorData;
+using WildAlert.Persistence.Entities.Sensors;
 using WildAlert.Shared.DateTimeProvider;
 
 namespace WildAlert.Application.Requests.SensorData.Commands.CreateSensorData;
@@ -24,7 +27,7 @@ public class CreateSensorDataCommandHandler : IRequestHandler<CreateSensorDataCo
       SensorDataEntity sensorDataEntity = _mapper.Map<SensorDataEntity>(request);
       sensorDataEntity.Id = Guid.NewGuid();
       sensorDataEntity.DetectedAt = _dateTimeProvider.UtcNow;
-      
+
       _context.SensorData.Add(sensorDataEntity); 
       await _context.SaveChangesAsync(cancellationToken);
 
