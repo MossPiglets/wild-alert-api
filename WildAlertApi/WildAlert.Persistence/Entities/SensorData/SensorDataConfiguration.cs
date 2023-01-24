@@ -8,7 +8,5 @@ public class SensorDataConfiguration : IEntityTypeConfiguration<SensorDataEntity
     public void Configure(EntityTypeBuilder<SensorDataEntity> builder)
     {
         builder.HasKey(x => x.Id);
-        //todo: jakieś zależności z sensorami?
     }
-
 }

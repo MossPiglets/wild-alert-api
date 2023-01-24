@@ -1,9 +1,6 @@
 using MapsterMapper;
 using MediatR;
-using WildAlert.Application.Requests.Alerts;
-using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Persistence;
-using WildAlert.Persistence.Entities.Alerts;
 using WildAlert.Persistence.Entities.SensorData;
 using WildAlert.Shared.DateTimeProvider;
 
@@ -25,7 +22,9 @@ public class CreateSensorDataCommandHandler : IRequestHandler<CreateSensorDataCo
    public async Task<SensorDataDto> Handle(CreateSensorDataCommand request, CancellationToken cancellationToken)
    {
       SensorDataEntity sensorDataEntity = _mapper.Map<SensorDataEntity>(request);
-      //todo: czy w ogóle jest co mapować? czy powinny być różnice między entity a dto tutaj?
+      sensorDataEntity.Id = Guid.NewGuid();
+      sensorDataEntity.DetectedAt = _dateTimeProvider.UtcNow;
+      
       _context.SensorData.Add(sensorDataEntity); 
       await _context.SaveChangesAsync(cancellationToken);
 
