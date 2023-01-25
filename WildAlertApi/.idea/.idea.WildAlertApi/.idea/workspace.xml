@@ -147,7 +147,8 @@
       <workItem from="1674290661632" duration="2720000" />
       <workItem from="1674300673025" duration="2017000" />
       <workItem from="1674308315730" duration="126000" />
-      <workItem from="1674573631147" duration="3342000" />
+      <workItem from="1674573631147" duration="3835000" />
+      <workItem from="1674640635034" duration="1426000" />
     </task>
     <task id="LOCAL-00001" summary="merge commit">
       <created>1668884663981</created>
@@ -222,6 +223,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial refactoring" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WildAlert.UnitTests/GetSensorsQueryHandlerTests.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\Krysia\RiderProjects\wild-alert-api\WildAlertApi\WildAlert.UnitTests\GetSensorsQueryHandlerTests.cs" initialLine="35" containingFunctionPresentation="method 'Handle_ShouldReturnAllSensors'">
+            <startOffsets>
+              <option value="1135" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1136" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="RiderUnitTests">
         <watch expression="latitude" />
