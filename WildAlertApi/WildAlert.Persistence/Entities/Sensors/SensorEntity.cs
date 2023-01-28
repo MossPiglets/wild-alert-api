@@ -8,5 +8,5 @@ public class SensorEntity
     public string? Name { get; set; }
     public double Longitude { get; set; }    
     public double Latitude { get; set; }
-    public ICollection<SensorDataEntity> SensorData { get; set; }
+    public ICollection<SensorDataEntity>? SensorData { get; set; }
 }

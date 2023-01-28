@@ -1,10 +1,7 @@
 using MapsterMapper;
 using MediatR;
-using MediatR.AspNet.Exceptions;
-using Microsoft.EntityFrameworkCore;
 using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.SensorData;
-using WildAlert.Persistence.Entities.Sensors;
 using WildAlert.Shared.DateTimeProvider;
 
 namespace WildAlert.Application.Requests.SensorData.Commands.CreateSensorData;
