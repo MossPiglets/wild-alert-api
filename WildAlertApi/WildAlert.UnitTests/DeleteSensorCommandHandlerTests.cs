@@ -1,5 +1,4 @@
 using FluentAssertions;
-using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
 using WildAlert.Persistence;
@@ -11,13 +10,11 @@ namespace WildAlert.UnitTests;
 public class DeleteSensorCommandHandlerTests
 {
     private ApplicationDbContext _context = null!;
-    private IMapper _mapper = null!;
     
     [SetUp]
     public void Setup()
     {
         _context = ApplicationDbContextFactory.Create();
-        _mapper = new Mapper();
 
         _context.Sensors.Add(new SensorEntity {Latitude = 50, Longitude = 10, Name = "test sensor"});
         _context.SaveChanges();

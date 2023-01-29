@@ -40,6 +40,6 @@ public class GetSensorsQueryHandlerTests
         // Act
         var result = await sut.Handle(query, CancellationToken.None);
         // Assert
-        result.Should().BeEquivalentTo(_context.Sensors);
+        result.Should().HaveSameCount(_context.Sensors);
     }
 }

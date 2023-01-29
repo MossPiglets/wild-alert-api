@@ -14,7 +14,7 @@ namespace WildAlert.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class SensorsController:ControllerBase
+public class SensorsController : ControllerBase
 {
     private readonly IMediator _mediator;
 

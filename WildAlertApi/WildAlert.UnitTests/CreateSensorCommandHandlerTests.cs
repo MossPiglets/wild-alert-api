@@ -32,7 +32,7 @@ public class CreateSensorCommandHandlerTests
         // Act
         var result = await sut.Handle(command, CancellationToken.None);
         // Assert
-        _context.Alerts.Should().NotBeEmpty();
+        _context.Sensors.Should().NotBeEmpty();
         result.Longitude.Should().Be(command.Longitude);
         result.Latitude.Should().Be(command.Latitude);
         result.Name.Should().Be(command.Name);
