@@ -1,10 +1,12 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using WildAlert.Api.Authentication;
 using WildAlert.Application.Requests.SensorData.Commands.CreateSensorData;
 
 namespace WildAlert.Api.Controllers;
 
 [ApiController]
+[ServiceFilter((typeof(ApiKeyAuthFilter)))]
 [Route("api/sensors/")]
 public class SensorDataController : ControllerBase
 {
