@@ -1,5 +1,8 @@
 using System.Text.Json.Serialization;
 using MediatR.AspNet;
+using Microsoft.OpenApi.Models;
+using WildAlert.Api.Authentication;
+using WildAlert.Api.Authorization;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Extensions;
 using WildAlert.Persistence.Extensions;
@@ -16,8 +19,33 @@ builder.Services.AddApplication();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.ApiKey,
+        Description = "API Key to authorize adding and managing sensors and deleting alerts",
+        Name = "x-api-key",
+        In = ParameterLocation.Header,
+        Scheme = "ApiKeyScheme"
+    });
+    var scheme = new OpenApiSecurityScheme()
+    {
+        Reference = new OpenApiReference()
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "ApiKey"
+        },
+        In = ParameterLocation.Header
+    };
+    var requirement = new OpenApiSecurityRequirement
+    {
+        { scheme, new List<string>() }
+    };
+    c.AddSecurityRequirement(requirement);
+});
 
+builder.Services.AddScoped<ApiKeyAuthFilter>();
 builder.Services.AddCors();
 
 var app = builder.Build();
