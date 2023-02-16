@@ -38,8 +38,7 @@
                     Szerokość @alert.Latitude
                 </td>
                 <td class="text-end">
-                    <a class="btn btn-primary" asp-action="Edit" asp-controller="Sensors" asp-route-id=@alert.Id>Edytuj</a>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteSensorModal" data-bs-id=@alert.Id>
+                    <button class="btn btn-danger" asp-action="Delete" asp-route-id=@alert.Id>
                      Usuń
                    </button>
                 </td>
@@ -48,37 +47,6 @@
         </tbody>
     </table>
     <div>
-        <a class="btn btn-outline-primary" asp-action="Create" asp-controller="Sensors">Dodaj zgłoszenie</a>
+        <a class="btn btn-outline-primary" asp-action="Create" asp-controller="Alerts">Dodaj zgłoszenie</a>
     </div>
 </div>
-<div class="modal fade" id="deleteBookModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Usuwanie książki</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Czy na pewno chcesz usunąć książkę?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="deletingLink" class="btn btn-danger" >Usuń</a>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    const deleteBookModal = document.getElementById("deleteBookModal");
-    if (deleteBookModal) {
-        deleteBookModal.addEventListener('show.bs.modal', event => {
-          // Przycisk aktywujący okno modalne.
-          const button = event.relatedTarget
-          // Pobranie danych z atrubutu data-bs-id.
-          const id = button.getAttribute('data-bs-id')
-          // Aktualizacja okna modalnego.
-          const deletingLink = deleteBookModal.querySelector('#deletingLink');
-          deletingLink.href = `/book/delete/${id}`;
-        })
-      }
-</script>
