@@ -1,7 +1,7 @@
-@model IList<WildAlert.Persistence.Entities.Alerts.AlertEntity>
+@model IEnumerable<WildAlert.Application.Requests.Alerts.AlertDto>
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Index";
     Layout = "_Layout";
 }
 
@@ -18,7 +18,10 @@
             </th>
             <th>
                 Komentarz
-            </th>   
+            </th>
+            <th>
+                Lokalizacja
+            </th>
             <th class="text-end">
                 Operacje
             </th>
@@ -31,10 +34,12 @@
                 <td>@alert.Animal</td>
                 <td>@alert.CreatedAt.ToString("dd.MM.yyyy")</td>
                 <td>@alert.Comments</td>
+                <td>Długość @alert.Longitude <br>
+                    Szerokość @alert.Latitude
+                </td>
                 <td class="text-end">
-                    <a class="btn btn-primary" asp-action="Edit" asp-controller="Book" asp-route-id=@alert.Id>Edytuj</a>
-                    <a class="btn btn-secondary" asp-action="Details" asp-controller="Book" asp-route-id=@alert.Id>Szczegóły</a>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteBookModal" data-bs-id=@alert.Id>
+                    <a class="btn btn-primary" asp-action="Edit" asp-controller="Sensors" asp-route-id=@alert.Id>Edytuj</a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteSensorModal" data-bs-id=@alert.Id>
                      Usuń
                    </button>
                 </td>
@@ -43,7 +48,7 @@
         </tbody>
     </table>
     <div>
-        <a class="btn btn-outline-primary" asp-action="Create" asp-controller="Book">Dodaj książkę</a>
+        <a class="btn btn-outline-primary" asp-action="Create" asp-controller="Sensors">Dodaj zgłoszenie</a>
     </div>
 </div>
 <div class="modal fade" id="deleteBookModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="label" aria-hidden="true">

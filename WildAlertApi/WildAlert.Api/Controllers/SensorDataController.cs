@@ -5,9 +5,8 @@ using WildAlert.Application.Requests.SensorData.Commands.CreateSensorData;
 
 namespace WildAlert.Api.Controllers;
 
-[ApiController]
+
 [ServiceFilter((typeof(ApiKeyAuthFilter)))]
-[Route("api/sensors/")]
 public class SensorDataController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -23,5 +22,10 @@ public class SensorDataController : ControllerBase
         request.SensorId = sensorId;
         var sensor = await _mediator.Send(request, token);
         return Ok(sensor);
+    }
+    
+    public string Index()
+    {
+        return "sensor data index";
     }
 }

@@ -14,9 +14,7 @@ using WildAlert.Persistence.Entities.Sensors;
 
 namespace WildAlert.Api.Controllers;
 
-[ApiController]
 [ServiceFilter((typeof(ApiKeyAuthFilter)))]
-[Route("api/[controller]")]
 public class SensorsController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -75,5 +73,10 @@ public class SensorsController : ControllerBase
     {
         var sensors = await _mediator.Send(query, token);
         return Ok(sensors);
+    }
+    
+    public string Index()
+    {
+        return "sensors index";
     }
 }

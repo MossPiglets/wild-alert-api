@@ -11,9 +11,7 @@ using WildAlert.Persistence.Entities.Alerts;
 
 namespace WildAlert.Api.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class AlertsController : ControllerBase
+public class AlertsController : Controller
 {
     private readonly IMediator _mediator;
 
@@ -23,7 +21,7 @@ public class AlertsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(CreateAlertCommand request, [FromServices] IValidator<CreateAlertCommand> validator, CancellationToken token)
+    public async Task<IActionResult> Create(CreateAlertCommand request, [FromServices] IValidator<CreateAlertCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
         
@@ -40,7 +38,7 @@ public class AlertsController : ControllerBase
     
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<AlertEntity>), (int) HttpStatusCode.OK)]
-    public async Task<IActionResult> Get([FromQuery] GetAlertsQuery query, [FromServices] IValidator<GetAlertsQuery> validator, CancellationToken token)
+    public async Task<IActionResult> Index([FromQuery] GetAlertsQuery query, [FromServices] IValidator<GetAlertsQuery> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(query, token);
         if (!result.IsValid)
@@ -48,8 +46,20 @@ public class AlertsController : ControllerBase
             result.AddToModelState(this.ModelState);
             return BadRequest(this.ModelState);
         }
-
+    
         var alerts = await _mediator.Send(query, token);
-        return Ok(alerts);
+        return View(alerts);
+    }
+    
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var command = new DeleteControllerCommand()
+        {
+            Id = id
+        };
+
+        await _mediator.Send(command);
+        return Ok();
     }
 }
