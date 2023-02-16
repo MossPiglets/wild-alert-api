@@ -11,8 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistence(builder.Environment, builder.Configuration);
 // Add services to the container.
+builder.Services.AddControllersWithViews();
 
-builder.Services.AddControllers(o => o.Filters.AddMediatrExceptions())
+builder.Services.AddMvc(o => o.Filters.AddMediatrExceptions())
     .AddJsonOptions(x => x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddApplication();
 
@@ -58,6 +59,14 @@ app.UseHttpsRedirection();
 
 app.UseCors(o => o.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
-app.MapControllers();
+app.UseStaticFiles();           
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Migrate().Run();

@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Application.Requests.Alerts.Queries.GetAlerts;
