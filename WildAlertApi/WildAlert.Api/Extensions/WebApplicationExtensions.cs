@@ -7,19 +7,15 @@ public static class WebApplicationExtensions
 {
     public static WebApplication Migrate(this WebApplication application)
     {
-        if (!application.Environment.IsProduction())
-        {
-            return application;
-        }
         application.Logger.Log(LogLevel.Information, "Checking for migrations...");
-        var dbContext = application.Services.GetRequiredService<ApplicationDbContext>();
+        using var scope = application.Services.CreateScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
         var migrations = dbContext.Database.GetPendingMigrations();
         if (migrations.Any())
         {
             application.Logger.Log(LogLevel.Information, "Migration started");
             dbContext.Database.Migrate();
         }
-
         return application;
     }
 }

@@ -26,7 +26,7 @@ public class AlertsController : Controller
     }
     
     [HttpPost]
-    public async Task<IActionResult> Create(CreateAlertCommand request, [FromServices] IValidator<CreateAlertCommand> validator, CancellationToken token)
+    public async Task<IActionResult> Create([Bind("Longitude,Latitude,Comments,Animal")]CreateAlertCommand request, [FromServices] IValidator<CreateAlertCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
         
@@ -56,7 +56,7 @@ public class AlertsController : Controller
     }
     
     [HttpDelete("{id:guid}")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Delete([FromRoute]Guid id)
     {
         var command = new DeleteAlertCommand()
         {
@@ -64,6 +64,6 @@ public class AlertsController : Controller
         };
 
         await _mediator.Send(command);
-        return Ok();
+        return NoContent();
     }
 }

@@ -13,13 +13,7 @@ public static class IServiceCollectionExtensions
     {
         services.AddDbContext<ApplicationDbContext>(x =>
         {
-            string connectionString;
-            if (environment.IsProduction())
-                connectionString = new HerokuDbConnector.HerokuDbConnector().Build();
-            else
-                connectionString = configuration.GetConnectionString("default");
-    
-            x.UseNpgsql(connectionString);
+            x.UseSqlite("Filename=mydb.db;");
         });
     }
 }

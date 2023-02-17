@@ -1,10 +1,9 @@
 @model IEnumerable<WildAlert.Application.Requests.Alerts.AlertDto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
-
 
 <div id="alerts">
     <table class="table">
@@ -38,7 +37,7 @@
                     Szerokość @alert.Latitude
                 </td>
                 <td class="text-end">
-                    <button class="btn btn-danger" asp-action="Delete" asp-route-id=@alert.Id>
+                    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-route-id=@alert.Id>
                      Usuń
                    </button>
                 </td>
@@ -47,6 +46,6 @@
         </tbody>
     </table>
     <div>
-        <a class="btn btn-outline-primary" asp-action="Create" asp-controller="Alerts">Dodaj zgłoszenie</a>
+        <a class="btn btn-outline-primary" href="/Alerts/Create"  asp-action="Create" asp-controller="Alerts">Dodaj zgłoszenie</a>
     </div>
 </div>
