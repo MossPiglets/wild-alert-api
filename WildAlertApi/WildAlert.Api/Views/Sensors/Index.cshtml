@@ -24,20 +24,20 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var sensors in @Model)
+        @foreach (var sensor in @Model)
         {
             <tr>
-                <td>@sensors.Name</td>
-                <td>@sensors.Id</td>
-                <td>Długość @sensors.Longitude <br>
-                    Szerokość @sensors.Latitude</td>
+                <td>@sensor.Name</td>
+                <td>@sensor.Id</td>
+                <td>Długość @sensor.Longitude <br>
+                    Szerokość @sensor.Latitude</td>
                 <td class="text-end">
-                    <button type="button" class="btn btn-danger">
+                    <button class="btn btn-danger" asp-action="Edit" asp-route-id="@sensor.Id">
                         Edytuj
                     </button>
-                    <button type="button" class="btn btn-danger">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteSensorModal" data-bs-id=@sensor.Id>
                         Usuń
-                    </button></td>
+                    </button></td>or
             </tr>
         }
         </tbody>
@@ -46,3 +46,36 @@
         <a class="btn btn-outline-primary" asp-action="Create">Dodaj czujnik</a>
     </div>
 </div>
+
+<div class="modal fade" id="deleteSensorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Usuwanie czujnika</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Czy na pewno chcesz usunąć czujnik?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                <a id="deletingLink" type="button" asp-action="Delete"  class="btn btn-danger" >Usuń</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const deleteSensorModal = document.getElementById("deleteSensorModal");
+    if (deleteSensorModal) {
+        deleteSensorModal.addEventListener('show.bs.modal', event => {
+          // Przycisk aktywujący okno modalne.
+          const button = event.relatedTarget
+          // Pobranie danych z atrubutu data-bs-id.
+          const id = button.getAttribute('data-bs-id')
+          // Aktualizacja okna modalnego.
+          const deletingLink = deleteSensorModal.querySelector('#deletingLink');
+          deletingLink.href = `/sensors/delete/${id}`;
+        })
+      }
+</script>

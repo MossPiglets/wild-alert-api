@@ -33,8 +33,8 @@
                 <td>@alert.Animal</td>
                 <td>@alert.CreatedAt.ToString("dd.MM.yyyy")</td>
                 <td>@alert.Comments</td>
-                <td>Długość @alert.Longitude <br>
-                    Szerokość @alert.Latitude
+                <td>Długość geograficzna @alert.Longitude <br>
+                    Szerokość geograficzna @alert.Latitude
                 </td>
                 <td class="text-end">
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAlertModal" data-bs-id=@alert.Id>
@@ -62,8 +62,23 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-                <a type="button" asp-action="Delete" class="btn btn-danger" >Usuń</a>
+                <a id="deletingLink" type="button" asp-action="Delete"  class="btn btn-danger" >Usuń</a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    const deleteAlertModal = document.getElementById("deleteAlertModal");
+    if (deleteAlertModal) {
+        deleteAlertModal.addEventListener('show.bs.modal', event => {
+          // Przycisk aktywujący okno modalne.
+          const button = event.relatedTarget
+          // Pobranie danych z atrubutu data-bs-id.
+          const id = button.getAttribute('data-bs-id')
+          // Aktualizacja okna modalnego.
+          const deletingLink = deleteAlertModal.querySelector('#deletingLink');
+          deletingLink.href = `/alerts/delete/${id}`;
+        })
+      }
+</script>

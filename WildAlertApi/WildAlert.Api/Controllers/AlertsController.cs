@@ -54,7 +54,6 @@ public class AlertsController : Controller
         return View(alerts);
     }
     
-    [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete([FromRoute]Guid id)
     {
         var command = new DeleteAlertCommand()
@@ -63,6 +62,6 @@ public class AlertsController : Controller
         };
 
         await _mediator.Send(command);
-        return Ok();
+        return RedirectToAction(nameof(Index));
     }
 }

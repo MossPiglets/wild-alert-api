@@ -7,7 +7,7 @@ using WildAlert.Persistence.Entities.Sensors;
 
 namespace WildAlert.Application.Requests.Alerts.Commands.DeleteAlert;
 
-public class DeleteAlertCommandHandler : IRequestHandler<DeleteSensorCommand>
+public class DeleteAlertCommandHandler : IRequestHandler<DeleteAlertCommand>
 {
     private readonly ApplicationDbContext _context;
     
@@ -16,7 +16,7 @@ public class DeleteAlertCommandHandler : IRequestHandler<DeleteSensorCommand>
         _context = context;
     }
 
-    public async Task<Unit> Handle(DeleteSensorCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(DeleteAlertCommand request, CancellationToken cancellationToken)
     {
         var alertToRemove = await _context.Alerts
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken: cancellationToken);

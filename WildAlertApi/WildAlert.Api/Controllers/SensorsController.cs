@@ -42,8 +42,7 @@ public class SensorsController : Controller
         return View(sensor);
     }
 
-    [HttpDelete("{id:guid}")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Delete([FromRoute]Guid id)
     {
         var command = new DeleteSensorCommand()
         {
@@ -51,11 +50,11 @@ public class SensorsController : Controller
         };
 
         await _mediator.Send(command);
-        return Ok();
+        return RedirectToAction(nameof(Index));
     }
     
-    [HttpPut("{id:guid}")]
-    public async Task<IActionResult> Put(Guid id, UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
+    
+    public async Task<IActionResult> Edit([FromForm]Guid id, UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
         
@@ -67,7 +66,7 @@ public class SensorsController : Controller
 
         request.Id = id;
         var sensor = await _mediator.Send(request, token);
-        return Ok(sensor);
+        return View(sensor);
     }
     
     [HttpGet]
