@@ -4,7 +4,6 @@ using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Authentication;
-using WildAlert.Api.Authorization;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
