@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using WildAlert.Persistence.Entities.SensorData;
 
 namespace WildAlert.Persistence.Entities.Sensors;
 

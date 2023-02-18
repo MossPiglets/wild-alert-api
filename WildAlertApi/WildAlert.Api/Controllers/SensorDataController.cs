@@ -1,13 +1,15 @@
+using System.Net;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using WildAlert.Api.Authentication;
 using WildAlert.Application.Requests.SensorData.Commands.CreateSensorData;
+using WildAlert.Application.Requests.SensorData.Queries.GetSensorData;
+using WildAlert.Persistence.Entities.SensorData;
 
 namespace WildAlert.Api.Controllers;
 
 
-[ServiceFilter((typeof(ApiKeyAuthFilter)))]
-public class SensorDataController : ControllerBase
+//[ServiceFilter((typeof(ApiKeyAuthFilter)))]
+public class SensorDataController : Controller
 {
     private readonly IMediator _mediator;
 
@@ -24,8 +26,11 @@ public class SensorDataController : ControllerBase
         return Ok(sensor);
     }
     
-    public string Index()
+    [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<SensorDataEntity>), (int) HttpStatusCode.OK)]
+    public async Task<IActionResult> Index([FromQuery] GetSensorDataQuery query, CancellationToken token)
     {
-        return "sensor data index";
-    }
+        var sensorData = await _mediator.Send(query, token);
+        return View(sensorData);
+    }    
 }

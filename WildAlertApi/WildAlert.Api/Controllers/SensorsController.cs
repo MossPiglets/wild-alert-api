@@ -3,8 +3,6 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using WildAlert.Api.Authentication;
-using WildAlert.Api.Authorization;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
@@ -14,8 +12,8 @@ using WildAlert.Persistence.Entities.Sensors;
 
 namespace WildAlert.Api.Controllers;
 
-[ServiceFilter((typeof(ApiKeyAuthFilter)))]
-public class SensorsController : ControllerBase
+//[ServiceFilter((typeof(ApiKeyAuthFilter)))]
+public class SensorsController : Controller
 {
     private readonly IMediator _mediator;
 
@@ -24,8 +22,13 @@ public class SensorsController : ControllerBase
         _mediator = mediator;
     }
 
+    public IActionResult Create()
+    {
+        return View();
+    }
+    
     [HttpPost]
-    public async Task<IActionResult> Post(CreateSensorCommand request, [FromServices] IValidator<CreateSensorCommand> validator, CancellationToken token)
+    public async Task<IActionResult> Create(CreateSensorCommand request, [FromServices] IValidator<CreateSensorCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
         
@@ -36,7 +39,7 @@ public class SensorsController : ControllerBase
         }
 
         var sensor = await _mediator.Send(request, token);
-        return Ok(sensor);
+        return View(sensor);
     }
 
     [HttpDelete("{id:guid}")]
@@ -69,14 +72,10 @@ public class SensorsController : ControllerBase
     
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<SensorEntity>), (int) HttpStatusCode.OK)]
-    public async Task<IActionResult> Get([FromQuery] GetSensorsQuery query, CancellationToken token)
+    public async Task<IActionResult> Index([FromQuery] GetSensorsQuery query, CancellationToken token)
     {
         var sensors = await _mediator.Send(query, token);
-        return Ok(sensors);
+        return View(sensors);
     }
-    
-    public string Index()
-    {
-        return "sensors index";
-    }
+
 }

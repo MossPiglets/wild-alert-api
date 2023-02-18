@@ -1,0 +1,48 @@
+@model IEnumerable<WildAlert.Application.Requests.Sensors.SensorDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<div id="sensors">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Nazwa czujnika
+            </th>
+            <th>
+                Id
+            </th>
+            <th>
+                Lokalizacja
+            </th>
+            <th class="text-end">
+                Operacje
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var sensors in @Model)
+        {
+            <tr>
+                <td>@sensors.Name</td>
+                <td>@sensors.Id</td>
+                <td>Długość @sensors.Longitude <br>
+                    Szerokość @sensors.Latitude</td>
+                <td class="text-end">
+                    <button type="button" class="btn btn-danger">
+                        Edytuj
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        Usuń
+                    </button></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <div>
+        <a class="btn btn-outline-primary" asp-action="Create">Dodaj czujnik</a>
+    </div>
+</div>

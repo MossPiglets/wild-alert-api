@@ -37,15 +37,33 @@
                     Szerokość @alert.Latitude
                 </td>
                 <td class="text-end">
-                    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-route-id=@alert.Id>
-                     Usuń
-                   </button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAlertModal" data-bs-id=@alert.Id>
+                        Usuń
+                    </button>
                 </td>
             </tr>
         }
         </tbody>
     </table>
     <div>
-        <a class="btn btn-outline-primary" href="/Alerts/Create"  asp-action="Create" asp-controller="Alerts">Dodaj zgłoszenie</a>
+        <a class="btn btn-outline-primary" asp-action="Create" asp-controller="Alerts">Dodaj zgłoszenie</a>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteAlertModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Usuwanie zgłoszenia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Czy na pewno chcesz usunąć zgłoszenie?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                <a type="button" asp-action="Delete" class="btn btn-danger" >Usuń</a>
+            </div>
+        </div>
     </div>
 </div>
