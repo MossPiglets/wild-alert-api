@@ -26,4 +26,4 @@ public class DeleteSensorCommandHandler : IRequestHandler<DeleteSensorCommand>
         
         return Unit.Value;
     }
-} 
+}
