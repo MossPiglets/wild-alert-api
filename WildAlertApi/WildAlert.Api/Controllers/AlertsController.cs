@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using WildAlert.Api.Authentication;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Alerts.Commands.CreateAlert;
 using WildAlert.Application.Requests.Alerts.Commands.DeleteAlert;
@@ -37,6 +38,7 @@ public class AlertsController : ControllerBase
         return Ok(alert);
     }
     
+    [ServiceFilter((typeof(ApiKeyAuthFilter)))]
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id)
     {
