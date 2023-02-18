@@ -38,8 +38,8 @@ public class SensorsController : Controller
             return BadRequest(this.ModelState);
         }
 
-        var sensor = await _mediator.Send(request, token);
-        return View(sensor);
+        await _mediator.Send(request, token);
+        return RedirectToAction(nameof(Index));
     }
 
     public async Task<IActionResult> Delete([FromRoute]Guid id)
@@ -52,19 +52,18 @@ public class SensorsController : Controller
         await _mediator.Send(command);
         return RedirectToAction(nameof(Index));
     }
-    
-    
-    public async Task<IActionResult> Edit([FromForm]Guid id, UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
+
+    [HttpPut]
+    public async Task<IActionResult> Edit([Bind("Id,Name,Longitude,Latitude")]UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
         
         if (!result.IsValid)
         {
             result.AddToModelState(this.ModelState);
-            return BadRequest(this.ModelState);
+            return RedirectToAction(nameof(Index));
         }
 
-        request.Id = id;
         var sensor = await _mediator.Send(request, token);
         return View(sensor);
     }

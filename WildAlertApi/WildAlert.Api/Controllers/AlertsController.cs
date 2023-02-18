@@ -36,7 +36,7 @@ public class AlertsController : Controller
         }
 
         var alert = await _mediator.Send(request, token);
-        return View(alert);
+        return RedirectToAction(nameof(Index));
     }
 
     [HttpGet]
