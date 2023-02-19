@@ -32,9 +32,9 @@
                 <td>Długość @sensor.Longitude <br>
                     Szerokość @sensor.Latitude</td>
                 <td class="text-end">
-                    <button class="btn btn-danger" asp-action="Edit" asp-route-id="@sensor.Id">
+                    <a class="btn btn-danger" asp-action="Edit" asp-route-id="@sensor.Id">
                         Edytuj
-                    </button>
+                    </a>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteSensorModal" data-bs-id=@sensor.Id>
                         Usuń
                     </button></td>

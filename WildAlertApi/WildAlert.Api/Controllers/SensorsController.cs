@@ -3,11 +3,13 @@ using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
 using WildAlert.Application.Requests.Sensors.Commands.UpdateSensor;
 using WildAlert.Application.Requests.Sensors.Queries.GetSensorsQuery;
+using WildAlert.Persistence;
 using WildAlert.Persistence.Entities.Sensors;
 
 namespace WildAlert.Api.Controllers;
@@ -16,10 +18,12 @@ namespace WildAlert.Api.Controllers;
 public class SensorsController : Controller
 {
     private readonly IMediator _mediator;
+    private readonly ApplicationDbContext _context;
 
-    public SensorsController(IMediator mediator)
+    public SensorsController(IMediator mediator, ApplicationDbContext context)
     {
         _mediator = mediator;
+        _context = context;
     }
 
     public IActionResult Create()
@@ -53,7 +57,13 @@ public class SensorsController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    [HttpPut]
+    public async Task<IActionResult> Edit([FromRoute] Guid id)
+    {
+        var sensor = await _context.Sensors.FirstOrDefaultAsync(x => x.Id == id);
+        return View(sensor);
+    }
+    
+    [HttpPost]
     public async Task<IActionResult> Edit([Bind("Id,Name,Longitude,Latitude")]UpdateSensorCommand request, [FromServices] IValidator<UpdateSensorCommand> validator, CancellationToken token)
     {
         ValidationResult result = await validator.ValidateAsync(request, token);
@@ -65,7 +75,7 @@ public class SensorsController : Controller
         }
 
         var sensor = await _mediator.Send(request, token);
-        return View(sensor);
+        return RedirectToAction(nameof(Index));
     }
     
     [HttpGet]
