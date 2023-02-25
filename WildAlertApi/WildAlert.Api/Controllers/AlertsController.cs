@@ -40,7 +40,7 @@ public class AlertsController : ControllerBase
     
     [ServiceFilter((typeof(ApiKeyAuthFilter)))]
     [HttpDelete("{id:guid}")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
         var command = new DeleteAlertCommand()
         {

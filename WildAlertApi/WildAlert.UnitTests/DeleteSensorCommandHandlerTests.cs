@@ -1,4 +1,6 @@
 using FluentAssertions;
+using MapsterMapper;
+using MediatR.AspNet.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
 using WildAlert.Persistence;
@@ -34,5 +36,20 @@ public class DeleteSensorCommandHandlerTests
         await sut.Handle(command, CancellationToken.None);
         // Assert
         _context.Sensors.Should().NotContain(s => s.Id == id);
+    }
+    
+    [Test]
+    public async Task Handle_WhenGivenIncorrectOrNonExistingId_ShouldThrowException()
+    {
+        //Arrange
+        var sut = new DeleteSensorCommandHandler(_context);
+        var command = new DeleteSensorCommand
+        {
+            Id =  new Guid("BDA3C213-EDF3-46FB-81DD-8FC9BF3FD11D")
+        };
+        //Act
+        Func<Task> result = () =>sut.Handle(command, CancellationToken.None);
+        //Assert
+        await result.Should().ThrowAsync<NotFoundException>();
     }
 }

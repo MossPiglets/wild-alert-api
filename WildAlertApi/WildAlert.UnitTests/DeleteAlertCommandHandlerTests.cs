@@ -1,4 +1,5 @@
 using FluentAssertions;
+using MediatR.AspNet.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using WildAlert.Application.Requests.Alerts.Commands.DeleteAlert;
 using WildAlert.Persistence;
@@ -34,5 +35,20 @@ public class DeleteAlertCommandHandlerTests
         await sut.Handle(command, CancellationToken.None);
         // Assert
         _context.Alerts.Should().NotContain(s => s.Id == id);
+    }
+    
+    [Test]
+    public async Task Handle_WhenGivenIncorrectOrNonExistingId_ShouldThrowException()
+    {
+        //Arrange
+        var sut = new DeleteAlertCommandHandler(_context);
+        var command = new DeleteAlertCommand
+        {
+            Id =  new Guid("BBA8E3C4-3A58-48D7-8A1D-501B6DF84108")
+        };
+        //Act
+        Func<Task> result = () =>sut.Handle(command, CancellationToken.None);
+        //Assert
+        await result.Should().ThrowAsync<NotFoundException>();
     }
 }
