@@ -1,15 +1,14 @@
 using FluentAssertions;
-using MapsterMapper;
 using MediatR.AspNet.Exceptions;
 using Microsoft.EntityFrameworkCore;
-using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
+using WildAlert.Application.Requests.Alerts.Commands.DeleteAlert;
 using WildAlert.Persistence;
-using WildAlert.Persistence.Entities.Sensors;
+using WildAlert.Persistence.Entities.Alerts;
 using WildAlert.UnitTests.Factories;
 
 namespace WildAlert.UnitTests;
 
-public class DeleteSensorCommandHandlerTests
+public class DeleteAlertCommandHandlerTests
 {
     private ApplicationDbContext _context = null!;
     
@@ -18,34 +17,34 @@ public class DeleteSensorCommandHandlerTests
     {
         _context = ApplicationDbContextFactory.Create();
 
-        _context.Sensors.Add(new SensorEntity {Latitude = 50, Longitude = 10, Name = "test sensor"});
+        _context.Alerts.Add(new AlertEntity {Animal = AnimalType.Deer, Latitude = 50, Longitude = 10, Comments = "test alert"});
         _context.SaveChanges();
     }
 
     [Test]
-    public async Task Handle_ShouldDeleteSensorById()
+    public async Task Handle_ShouldDeleteAlertById()
     {
         // Arrange
-        var sut = new DeleteSensorCommandHandler(_context);
-        var id = (await _context.Sensors.FirstAsync()).Id;
-        var command = new DeleteSensorCommand
+        var sut = new DeleteAlertCommandHandler(_context);
+        var id = (await _context.Alerts.FirstAsync()).Id;
+        var command = new DeleteAlertCommand
         {
             Id = id
         };
         // Act
         await sut.Handle(command, CancellationToken.None);
         // Assert
-        _context.Sensors.Should().NotContain(s => s.Id == id);
+        _context.Alerts.Should().NotContain(s => s.Id == id);
     }
     
     [Test]
     public async Task Handle_WhenGivenIncorrectOrNonExistingId_ShouldThrowException()
     {
         //Arrange
-        var sut = new DeleteSensorCommandHandler(_context);
-        var command = new DeleteSensorCommand
+        var sut = new DeleteAlertCommandHandler(_context);
+        var command = new DeleteAlertCommand
         {
-            Id =  new Guid("BDA3C213-EDF3-46FB-81DD-8FC9BF3FD11D")
+            Id =  new Guid("BBA8E3C4-3A58-48D7-8A1D-501B6DF84108")
         };
         //Act
         Func<Task> result = () =>sut.Handle(command, CancellationToken.None);

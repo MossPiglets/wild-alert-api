@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using WildAlert.Api.Authorization;
 
 namespace WildAlert.Api.Authentication;
 
@@ -26,7 +25,6 @@ public class ApiKeyAuthFilter : Attribute, IAuthorizationFilter
         if (!apiKey.Equals(extractedApiKey))
         {
             context.Result = new UnauthorizedObjectResult("Invalid API Key");
-            return;
         }
     }
 }

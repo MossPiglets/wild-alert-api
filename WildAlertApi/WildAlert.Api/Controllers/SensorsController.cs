@@ -4,7 +4,6 @@ using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WildAlert.Api.Authentication;
-using WildAlert.Api.Authorization;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Requests.Sensors.Commands.CreateSensor;
 using WildAlert.Application.Requests.Sensors.Commands.DeleteSensor;
@@ -42,7 +41,7 @@ public class SensorsController : ControllerBase
     }
 
     [HttpDelete("{id:guid}")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Delete([FromRoute]Guid id)
     {
         var command = new DeleteSensorCommand()
         {

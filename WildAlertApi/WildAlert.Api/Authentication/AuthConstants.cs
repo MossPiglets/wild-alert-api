@@ -1,4 +1,4 @@
-namespace WildAlert.Api.Authorization;
+namespace WildAlert.Api.Authentication;
 
 public static class AuthConstants
 {

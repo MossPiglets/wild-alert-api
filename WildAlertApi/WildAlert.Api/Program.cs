@@ -2,7 +2,6 @@ using System.Text.Json.Serialization;
 using MediatR.AspNet;
 using Microsoft.OpenApi.Models;
 using WildAlert.Api.Authentication;
-using WildAlert.Api.Authorization;
 using WildAlert.Api.Extensions;
 using WildAlert.Application.Extensions;
 using WildAlert.Persistence.Extensions;
