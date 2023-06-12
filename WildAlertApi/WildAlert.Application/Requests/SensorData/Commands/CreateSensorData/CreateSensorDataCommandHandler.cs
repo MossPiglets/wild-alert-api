@@ -24,9 +24,9 @@ public class CreateSensorDataCommandHandler : IRequestHandler<CreateSensorDataCo
 
    public async Task<SensorDataDto> Handle(CreateSensorDataCommand request, CancellationToken cancellationToken)
    {
-      var sensor = await _context.SensorData
-         .FirstOrDefaultAsync(x => x.SensorId == request.SensorId, cancellationToken: cancellationToken);
-      if (sensor is null) throw new NotFoundException(typeof(SensorEntity), request.SensorId.ToString());
+      var sensorId = await _context.Sensors
+         .FirstOrDefaultAsync(x => x.Id == request.SensorId, cancellationToken: cancellationToken);
+      if (sensorId is null) throw new NotFoundException(typeof(SensorEntity), request.SensorId.ToString());
       
       SensorDataEntity sensorDataEntity = _mapper.Map<SensorDataEntity>(request);
       sensorDataEntity.Id = Guid.NewGuid();
