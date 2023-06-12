@@ -39,7 +39,7 @@ public class CreateSensorDataCommandHandlerTests
     public async Task Handle_ShouldCreateNewSenorData()
     {
         // Arrange
-        var sensorId = await _context.Sensors.Select(x => x.Id).FirstOrDefaultAsync();
+        var sensorId = (await _context.Sensors.FirstAsync()).Id;
         var sut = new CreateSensorDataCommandHandler(_context, _mapper, _dateTimeProvider);
         var command = new CreateSensorDataCommand
         {
