@@ -20,18 +20,22 @@ The solution architecture consists of multiple projects, each with a specific ro
 The Persistence project handles data persistence and access to the PostgreSQL database. It includes repositories, data models, and database-specific configuration. 
 
 **4. WildAlert.UnitTests**
+
 The UnitTests project utilizes the NUnit testing framework and BDD style syntax of Given, When, Then.
 
 **5. WildAlert.IntegrationTests**
+
 This project will contain IntegrationTests in the future.
 
-**WildAlert.Shared** and **WildAlert.Tests.Shared** shared utilites for other projects.
+**WildAlert.Shared** and **WildAlert.Tests.Shared** contain shared utilites for other projects.
 
 ## Usage
 Ensure that Docker is running on your system. 
 Build and run the Docker container. Execute the following command in the terminal:
+
 ``` docker-compose up -d ```
 And start the project:
+
 ```dotnet run ```
 
 To access certain endpoints, API Key authentication is required. 
