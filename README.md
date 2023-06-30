@@ -1,4 +1,4 @@
-#WildAlertAPI
+# WildAlertAPI
 
 ## Project Description
 This API is a part of an educational and self-development project designed to detect and gather data about the presence of wild animals in urban areas.
@@ -30,13 +30,9 @@ This project will contain IntegrationTests in the future.
 ## Usage
 Ensure that Docker is running on your system. 
 Build and run the Docker container. Execute the following command in the terminal:
-```
-docker-compose up -d
-```
+``` docker-compose up -d ```
 And start the project:
-```
-dotnet run
-```
+```dotnet run ```
 
 To access certain endpoints, API Key authentication is required. 
 
