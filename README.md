@@ -34,6 +34,7 @@ Ensure that Docker is running on your system.
 Build and run the Docker container. Execute the following command in the terminal:
 
 ``` docker-compose up -d ```
+
 And start the project:
 
 ```dotnet run ```
@@ -44,14 +45,14 @@ To access certain endpoints, API Key authentication is required.
 >1a87479852d0471881df50cb39e33283
 
 ## Technologies
-*C#
-*ASP.NET
-*Entity Framework Core
-*NUnit
-*MediatR
-*CQRS
-*Swagger
-*Docker
+* C#
+* ASP.NET
+* Entity Framework Core
+* NUnit
+* MediatR
+* CQRS
+* Swagger
+* Docker
 
 ## License
 This project is licensed under the MIT License.
