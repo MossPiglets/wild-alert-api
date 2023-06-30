@@ -46,12 +46,19 @@ To access certain endpoints, API Key authentication is required.
 
 ## Technologies
 * C#
+ 
 * ASP.NET
+  
 * Entity Framework Core
+  
 * NUnit
+  
 * MediatR
+  
 * CQRS
+  
 * Swagger
+  
 * Docker
 
 ## License
